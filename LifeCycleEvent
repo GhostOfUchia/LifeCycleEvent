@@ -1,4 +1,49 @@
 /*
+package com.example.lifecycle
+
+import android.util.Log
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleObserver
+import androidx.lifecycle.OnLifecycleEvent
+
+class Observer :LifecycleObserver {
+    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)   // catch the activity life cycle event
+    fun onCreat() {                                 // ON_CREAT
+        Log.d("Check", "On-Creat Run")       // running status check
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_START)   // catch the activity life cycle event
+    fun onStart() {                                //  ON_START
+        Log.d("Check", "On-Start Run")      // running status check    }
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)   // catch the life cycle event
+    fun onResume(){                                 // ON_RESUME
+       Log.d("check","Observer On-Resume ") // running status check
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)        //catch the Activity Lifecycle event
+    fun onPause(){                                     //ON-Pause
+       Log.d("check","Observer On-Pause Run") //running status check
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)        //catch the Activity Lifecycle event
+    fun onStop(){                                     //ON-Pause
+        Log.d("check","Observer On-Stop Run") //running status check
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_ANY)           //catch the Activity Lifecycle event
+    fun onRestart(){                                     //ON-Restrat
+        Log.d("check","Observer On-Restart Run") //running status check
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)        //catch the Activity Lifecycle event
+    fun onDestroy(){                                     //ON-Destroy
+        Log.d("check","Observer On-Destroy Run") //running status check
+    }
+
+}
+
 
  Method	Description
 onCreate	called when activity is first created.
